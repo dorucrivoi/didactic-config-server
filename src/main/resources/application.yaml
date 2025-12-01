@@ -3,9 +3,16 @@ server:
 
 spring:
   application:
-    name: config-server
+    name: didactic-config-server
+
   eureka:
+    instance:
+      hostname: didactic-config-server
+      prefer-ip-address: false
+
     client:
+      register-with-eureka: true
+      fetch-registry: true
       healthcheck:
         enabled: true
       service-url:
