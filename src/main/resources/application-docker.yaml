@@ -2,3 +2,16 @@ eureka:
   client:
     service-url:
       defaultZone: http://discovery-server:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+
+
